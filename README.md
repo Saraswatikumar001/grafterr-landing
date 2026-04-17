@@ -57,7 +57,7 @@ grafterr-landing/
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/grafterr-landing.git
+git clone https://github.com/Saraswatikumar001/grafterr-landing
 cd grafterr-landing
 npm install
 ```
