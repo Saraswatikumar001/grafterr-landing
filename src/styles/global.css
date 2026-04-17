@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 874px;
+    margin-inline: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.py-5{
+    padding-block: 25px;
+}
+
+.mb-0{
+    margin-bottom: 0px;
+}
+
+.my-0{
+    margin-block: 0px;
+}
