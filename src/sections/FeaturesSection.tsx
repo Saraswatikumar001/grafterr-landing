@@ -7,7 +7,7 @@ export const FeaturesSection = () => {
 
   if (error) {
     return (
-      <section className="feature-section-height d-flex justify-content-center align-center flex-column">
+      <section className="feature-section-height">
         <p className="error-message">{error}</p>
         <button className="retry-btn" onClick={retry}>Retry</button>
       </section>
@@ -16,7 +16,7 @@ export const FeaturesSection = () => {
 
   if (loading) {
     return (
-      <section className="feature-section-height d-flex justify-content-center align-center flex-column">
+      <section className="feature-section-height position-relative w-100 overflow-hidden">
         <div className="w-874px d-flex flex-column align-center" style={{ gap: "16px", alignItems: "center" }}>
           <Skeleton height="2.5rem" width="80%" borderRadius="8px" />
           <Skeleton height="2.5rem" width="60%" borderRadius="8px" />
@@ -33,13 +33,15 @@ export const FeaturesSection = () => {
   }
 
   return (
-    <section className="feature-section-height d-flex justify-content-center align-center flex-column fade-in">
-      <div className="w-874px">
-        <h2 className="text-center feature-section-heading">{data!.title}</h2>
-        <p
-          className="text-center feature-section-description mb-5"
-          dangerouslySetInnerHTML={{ __html: data!.subtitle }}
-        />
+    <section className="feature-section-height fade-in position-relative w-100 overflow-hidden">
+      <div className="d-flex justify-content-center align-center">
+        <div className="w-874px">
+          <h2 className="text-center feature-section-heading">{data!.title}</h2>
+          <p
+            className="text-center feature-section-description mb-5"
+            dangerouslySetInnerHTML={{ __html: data!.subtitle }}
+          />
+        </div>
       </div>
 
       <div className="carousel">

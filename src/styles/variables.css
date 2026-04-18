@@ -52,7 +52,7 @@
 }
 
 .carousel-card {
-    width: 589px;
+    width: 450px;
     height: 708px;
     border-radius: 18px;
     padding: 20px;
@@ -81,8 +81,10 @@
 
 .carousel {
     height: 900px;
-    width: 1400px;
+    width: 100%;
     overflow-x: hidden;
+    position: absolute;
+    left: 117px;
 }
 
 .carousel-wrapper {
@@ -110,6 +112,7 @@
 
 .carousel-nav{
     gap: 10px;
+    margin-left: -117px;
 }
 
 /* Extra small devices (phones, 600px and down) */
