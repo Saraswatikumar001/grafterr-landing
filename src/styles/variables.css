@@ -81,12 +81,14 @@
 
 .carousel {
     height: 900px;
+    width: 1400px;
+    overflow-x: hidden;
 }
 
 .carousel-wrapper {
-    margin-left: 117px;
+    /* margin-left: 117px; */
     scrollbar-width: none;
-    width: 1848px;
+    width: 100%;
     -ms-overflow-style: none;
 }
 
