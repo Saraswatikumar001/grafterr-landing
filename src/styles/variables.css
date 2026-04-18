@@ -90,8 +90,13 @@
     -ms-overflow-style: none;
 }
 
-.carousel-viewport::-webkit-scrollbar, .carousel::-webkit-scrollbar {
+.carousel-viewport::-webkit-scrollbar,
+.carousel::-webkit-scrollbar {
     display: none;
+}
+
+.carousel-nav {
+    
 }
 
 /* Extra small devices (phones, 600px and down) */

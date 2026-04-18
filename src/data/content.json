@@ -1,0 +1,101 @@
+{
+    "navigation": {
+        "logo": {
+            "src": "/images/logo.png",
+            "alt": "Grafterr logo"
+        },
+        "links": [
+            {
+                "id": 1,
+                "label": "Products",
+                "href": "/products"
+            },
+            {
+                "id": 2,
+                "label": "Solutions",
+                "href": "/solutions"
+            }
+        ],
+        "cta": {
+            "label": "Get started",
+            "href": "/get-started"
+        }
+    },
+    "hero": {
+        "headlinePrefix": "Looking for a new",
+        "headlineGradient": "technology provider?",
+        "subheadline": "Explore our <strong>success stories</strong> to see how businesses like yours have transformed with Grafterr's technology.",
+        "cta": {
+            "primary": {
+                "label": "Learn more",
+                "href": "/get-started"
+            }
+        },
+        "decorativeShapes": [
+            {
+                "id": 1,
+                "size": 120,
+                "color": "#5895F0",
+                "opacity": 0.15,
+                "top": "10%",
+                "left": "5%"
+            },
+            {
+                "id": 2,
+                "size": 80,
+                "color": "#F1B662",
+                "opacity": 0.2,
+                "top": "60%",
+                "left": "90%"
+            },
+            {
+                "id": 3,
+                "size": 60,
+                "color": "#5895F0",
+                "opacity": 0.1,
+                "top": "80%",
+                "left": "15%"
+            }
+        ]
+    },
+    "featuresSection": {
+        "title": "One platform,",
+        "titleAccent": "every touchpoint",
+        "subtitle": "Explore our success stories to see how businesses like yours have transformed with Grafterr's technology.",
+        "products": [
+            {
+                "id": 1,
+                "title": "Point of sale",
+                "description": "Manage orders, payments and receipts from a single intuitive interface built for speed and reliability.",
+                "image": "/images/point-of-sale-image.png",
+                "badge": "Most popular"
+            },
+            {
+                "id": 2,
+                "title": "Self-service",
+                "description": "Let customers place their own orders with a sleek kiosk experience that reduces wait times.",
+                "image": "/images/self-service-image.png",
+                "badge": null
+            },
+            {
+                "id": 3,
+                "title": "Kitchen management",
+                "description": "Streamline kitchen workflows with real-time ticket tracking and order prioritisation.",
+                "image": "/images/kitchen-management-image.png",
+                "badge": null
+            }
+        ]
+    },
+    "carousel": {
+        "itemsPerView": {
+            "mobile": 1,
+            "tablet": 2,
+            "desktop": 3
+        },
+        "showArrows": true,
+        "showDots": true,
+        "gap": 35,
+        "autoPlay": false,
+        "autoPlayInterval": 4000
+    }
+}

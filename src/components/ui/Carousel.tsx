@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ProductCard } from "./ProductCard"
 
 type Card = {
   id: number
@@ -29,15 +30,12 @@ export const Carousel = ({ cards, visibleCount = 3 }: CardCarouselProps) => {
           style={{ transform: `translateX(-${current * cardWidth}%)` }}
         >
           {cards.map((card) => (
-            <div style={{ background: "rgba(250, 250, 250, 1)" }} className="carousel-card">
-              <h5>{card.title}</h5>
-              <img src={card.image} alt={card.title} />
-            </div>
+            <ProductCard key={card.id} card={card} />
           ))}
         </div>
       </div>
 
-      <div className="carousel-nav">
+      <div className="carousel-nav d-flex justify-content-center align-center">
         <button onClick={() => goTo(current - 1)} disabled={current === 0}>&#8592;</button>
         {Array.from({ length: maxStep + 1 }).map((_, i) => (
           <span
