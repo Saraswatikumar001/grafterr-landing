@@ -6,7 +6,6 @@ import '../styles/variables.css'
 
 export const HeroSection = () => {
     const { data, loading, error, retry } = useHeroContent()
-    console.log(data);
     if (error) {
         return (
             <section className="hero hero--error">
