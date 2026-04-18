@@ -12,6 +12,7 @@ body {
 .container {
     max-width: 100%;
     margin-inline: auto;
+    overflow: hidden;
 }
 
 .d-flex {
