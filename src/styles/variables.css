@@ -95,8 +95,18 @@
     display: none;
 }
 
-.carousel-nav {
-    
+.carousel-nav button {
+    height: 60px;
+    width: 60px;
+    font-size: 24px;
+    background: rgba(221, 221, 221, 1);
+    border-radius: 50%;
+    border: none;
+    font-weight: 700;
+}
+
+.carousel-nav{
+    gap: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -14,33 +14,29 @@ const getBreakpoint = (): Breakpoint => {
 }
 
 export const useCarousel = ({ total, itemsPerView }: UseCarouselProps) => {
-    const [current, setCurrent] = useState(0)
     const [breakpoint, setBreakpoint] = useState<Breakpoint>(getBreakpoint)
+    const visibleCount = itemsPerView[breakpoint]
+
+    const [trackIndex, setTrackIndex] = useState(0)
+    const [current, setCurrent] = useState(0)
+
     const touchStartX = useRef<number | null>(null)
 
-    const visibleCount = itemsPerView[breakpoint]
-    const maxStep = Math.max(0, total - visibleCount)
+    const goTo = useCallback((realIndex: number) => {
+        const wrapped = ((realIndex % total) + total) % total
+        setCurrent(wrapped)
+        setTrackIndex(realIndex)
+    }, [total])
 
-    const goTo = useCallback((n: number) => {
-        setCurrent(prev => Math.max(0, Math.min(n, maxStep)))
-    }, [maxStep])
+    const goNext = useCallback(() => goTo(trackIndex + 1), [trackIndex, goTo])
+    const goPrev = useCallback(() => goTo(trackIndex - 1), [trackIndex, goTo])
 
-    const goNext = useCallback(() => goTo(current + 1), [current, goTo])
-    const goPrev = useCallback(() => goTo(current - 1), [current, goTo])
-
-    // clamp current if visibleCount changes on resize
-    useEffect(() => {
-        setCurrent(prev => Math.min(prev, maxStep))
-    }, [maxStep])
-
-    // track breakpoint on resize
     useEffect(() => {
         const handleResize = () => setBreakpoint(getBreakpoint())
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
-    // touch events
     const onTouchStart = useCallback((e: React.TouchEvent) => {
         touchStartX.current = e.touches[0].clientX
     }, [])
@@ -54,12 +50,11 @@ export const useCarousel = ({ total, itemsPerView }: UseCarouselProps) => {
 
     return {
         current,
+        trackIndex,
         visibleCount,
         goTo,
         goNext,
         goPrev,
-        canGoNext: current < maxStep,
-        canGoPrev: current > 0,
         onTouchStart,
         onTouchEnd,
     }

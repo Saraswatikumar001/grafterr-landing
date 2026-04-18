@@ -59,28 +59,25 @@
         ]
     },
     "featuresSection": {
-        "title": "One platform,",
+        "title": "More ways Grafterr can help you grow your business",
         "titleAccent": "every touchpoint",
-        "subtitle": "Explore our success stories to see how businesses like yours have transformed with Grafterr's technology.",
+        "subtitle": "An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations",
         "products": [
             {
                 "id": 1,
                 "title": "Point of sale",
-                "description": "Manage orders, payments and receipts from a single intuitive interface built for speed and reliability.",
                 "image": "/images/point-of-sale-image.png",
                 "badge": "Most popular"
             },
             {
                 "id": 2,
                 "title": "Self-service",
-                "description": "Let customers place their own orders with a sleek kiosk experience that reduces wait times.",
                 "image": "/images/self-service-image.png",
                 "badge": null
             },
             {
                 "id": 3,
                 "title": "Kitchen management",
-                "description": "Streamline kitchen workflows with real-time ticket tracking and order prioritisation.",
                 "image": "/images/kitchen-management-image.png",
                 "badge": null
             }
