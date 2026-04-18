@@ -5,17 +5,17 @@ export const FeaturesSection = () => {
     {
       id: 1,
       title: "Point of sale",
-      image: "/public/images/point-of-sale-image.png"
+      image: "/images/point-of-sale-image.png"
     },
     {
       id: 1,
       title: "Point of sale",
-      image: "/public/images/point-of-sale-image.png"
+      image: "/images/point-of-sale-image.png"
     },
     {
       id: 1,
       title: "Point of sale",
-      image: "/public/images/point-of-sale-image.png"
+      image: "/images/point-of-sale-image.png"
     }
   ]
   return (
