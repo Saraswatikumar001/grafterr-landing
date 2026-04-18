@@ -5,22 +5,29 @@ export const FeaturesSection = () => {
     {
       id: 1,
       title: "Point of sale",
-      description: "Manage orders and payments from one interface.",
-      image: <img src="/pos.png" alt="POS" />
+      image: "/public/images/point-of-sale-image.png"
     },
     {
-      id: 2,
-      title: "Self-service",
-      description: "Let customers order via kiosk.",
-      image: <img src="/kiosk.png" alt="Kiosk" />
+      id: 1,
+      title: "Point of sale",
+      image: "/public/images/point-of-sale-image.png"
     },
+    {
+      id: 1,
+      title: "Point of sale",
+      image: "/public/images/point-of-sale-image.png"
+    }
   ]
   return (
     <section className="feature-section-height">
-      <h2 className="text-center feature-section-heading">More ways Grafterr can help you grow your business</h2>
-      <p className="text-center feature-section-description">An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations</p>
+      <div className="w-874px">
+        <h2 className="text-center feature-section-heading">More ways Grafterr can help you grow your business</h2>
+        <p className="text-center feature-section-description mb-5">An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations</p>
+      </div>
 
-      <Carousel cards={cards} visibleCount={3} />
+      <div className="carousel">
+        <Carousel cards={cards} />
+      </div>
     </section>
   )
 }

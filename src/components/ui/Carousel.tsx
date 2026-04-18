@@ -3,8 +3,7 @@ import { useState } from "react"
 type Card = {
   id: number
   title: string
-  description: string
-  image: React.ReactNode
+  image: string
 }
 
 type CardCarouselProps = {
@@ -23,23 +22,16 @@ export const Carousel = ({ cards, visibleCount = 3 }: CardCarouselProps) => {
   const cardWidth = 100 / visibleCount
 
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel-wrapper position-absolute left-0">
       <div className="carousel-viewport">
         <div
           className="carousel-track"
           style={{ transform: `translateX(-${current * cardWidth}%)` }}
         >
           {cards.map((card) => (
-            <div
-              className="carousel-card"
-              key={card.id}
-              style={{ minWidth: `calc(${cardWidth}% - 12px)` }}
-            >
-              <div className="card-image">{card.image}</div>
-              <div className="card-body">
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </div>
+            <div style={{ background: "rgba(250, 250, 250, 1)" }} className="carousel-card">
+              <h5>{card.title}</h5>
+              <img src={card.image} alt={card.title} />
             </div>
           ))}
         </div>

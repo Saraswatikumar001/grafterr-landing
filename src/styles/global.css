@@ -10,12 +10,16 @@ body {
 }
 
 .container {
-    max-width: 874px;
+    max-width: 100%;
     margin-inline: auto;
 }
 
 .d-flex {
     display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .justify-content-center {
@@ -36,6 +40,34 @@ body {
 
 .my-0 {
     margin-block: 0px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.mx-auto {
+    margin-block: auto;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.left-0{
+    left: 0;
 }
 
 /* Extra small devices (phones, 600px and down) */
