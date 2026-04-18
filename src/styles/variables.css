@@ -71,7 +71,7 @@
     height: 698px;
     width: 643px;
     object-fit: cover;
-    object-position: left;
+    object-position: right;
 }
 
 .carousel-track {
@@ -103,6 +103,7 @@
     border-radius: 50%;
     border: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .carousel-nav{
